@@ -44,7 +44,7 @@
           </ul>
         </div>
         <div class="nav-button">
-          <a href="monika_dev2.pdf" download>
+          <a href="Monika.pdf" download>
             <button class="btn">
               Download CV <i class="uil uil-file-alt"></i>
             </button>
@@ -71,14 +71,14 @@
             </div>
             <div class="featured-text-info">
               <p>
-                Experienced frontend developer with a passion for creating
-                visually stunning and user-friendly websites.
+                Experienced ReactNative developer with a passion for creating
+                visually stunning and user-friendly Mobile Applications in both Android and iOS.
               </p>
             </div>
             <div class="featured-text-btn">
               <button id="aboutMeBtn" class="btn blue-btn">About Me</button>
 
-              <a href="monika_dev2.pdf" download>
+              <a href="Monika.pdf" download>
                 <button class="btn">
                   Download CV <i class="uil uil-file-alt"></i>
                 </button>
@@ -130,20 +130,17 @@
               <div class="about-info">
                 <h3>My introduction</h3>
                 <p>
-                  I am a passionate and dedicated Frontend Developer with over 2
-                  years of experience in creating dynamic and responsive web
+                  I am a passionate and dedicated Mobile Application Developer with over 2
+                  years of experience in both Android and iOS cross-platform
                   applications. My expertise lies in translating design concepts
                   into functional and aesthetically pleasing interfaces using
-                  modern web technologies.Over the past few years, I have honed
-                  my skills in HTML5, CSS3, and JavaScript, and have developed a
+                  modern technologies.Over the past few years, I have honed
+                  my skills in ReactNative,Android,iOS and JavaScript, and have developed a
                   deep understanding of frontend frameworks like React.js and
-                  ReactNative. My work is driven by a commitment to delivering
-                  high-quality user experiences, ensuring that every application
-                  is not only visually appealing but also highly functional and
-                  user-friendly.
+                  ReactNative.Upgraded SDK versions and deployed in both Playstore & Appstore.
                 </p>
                 <div class="about-btn">
-                  <a href="monika_dev2.pdf" download>
+                  <a href="Monika.pdf" download>
                     <button class="btn">
                       Download CV <i class="uil uil-file-alt"></i>
                     </button>
@@ -157,14 +154,18 @@
                   <h3>Skills</h3>
                 </div>
                 <div class="skills-list">
+                  <span>ReactNative</span>
+                  <span>ReactJS</span>
+                  <span>Android SDK</span>
+                  <span>iOS</span>
+                  <span>Swift</span>
                   <span>HTML</span>
                   <span>CSS</span>
                   <span>Bootstrap</span>
                   <span>JavaScript</span>
-                  <span>ReactJS</span>
-                  <span>ReactNative</span>
-                  <span>NodeJS</span>
-                  <span>MongoDB</span>
+                 
+                 
+               
                 </div>
               </div>
               <div class="skills-box">
@@ -184,6 +185,23 @@
             <h1>Projects</h1>
           </div>
           <div class="project-container">
+            <div class="project-box" onclick="showStoreOptions('rise')">
+              <i class="uil uil-briefcase-alt"></i>
+              <h3>RISE</h3>
+              <label>Mobile Application - Android & iOS</label>
+            </div>
+        
+            <div class="project-box" onclick="showStoreOptions('glocalprayer')">
+              <i class="uil uil-briefcase-alt"></i>
+              <h3>GlocalPrayer Network</h3>
+              <label>Mobile Application - Android & iOS</label>
+            </div>
+        
+            <div class="project-box" onclick="showStoreOptions('ananthjeevan')">
+              <i class="uil uil-briefcase-alt"></i>
+              <h3>AnanthJeevan & MYKIMS</h3>
+              <label>Mobile Application - Android & iOS</label>
+            </div>
             <div class="project-box">
               <i class="uil uil-briefcase-alt"></i>
               <h3>OTM & Financial Counselling</h3>
@@ -191,16 +209,87 @@
             </div>
             <div class="project-box">
               <i class="uil uil-briefcase-alt"></i>
-              <h3>MYKIMS</h3>
-              <label>ReactNative mobile application</label>
+              <h3>Hnbmart</h3>
+              <label>ReactJS web application</label>
             </div>
+        
             <div class="project-box">
               <i class="uil uil-award"></i>
               <h3>Experience</h3>
-              <label>2 Years in the field</label>
+              <label>2+ Years in the field</label>
             </div>
           </div>
         </section>
+        
+        <!-- Store Selection Popup -->
+        <div id="store-popup" class="popup">
+          <p>Select your platform</p>
+          <button onclick="openLink('android')">Android</button>
+          <button onclick="openLink('ios')">iOS</button>
+        </div>
+        
+        <style>
+          /* Popup styling */
+          .popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+          }
+          .popup button {
+            margin: 10px;
+            padding: 8px 16px;
+            border: none;
+            cursor: pointer;
+          }
+          .popup button:first-child {
+            background-color: #4285F4;
+            color: white;
+          }
+          .popup button:last-child {
+            background-color: #00EEFF;
+            color: black;
+          }
+        </style>
+        
+        <script>
+          let selectedApp = "";
+        
+          function showStoreOptions(app) {
+            selectedApp = app;
+            document.getElementById("store-popup").style.display = "block";
+          }
+        
+          function openLink(platform) {
+            let urls = {
+              rise: {
+                android: "https://play.google.com/store/apps/details?id=com.restore7.rise&hl=en",
+                ios: "https://apps.apple.com/in/app/rise-global-community/id1547110145"
+              },
+              glocalprayer: {
+                android: "https://play.google.com/store/apps/details?id=com.glocalprayer.ep&hl=en",
+                ios: "https://apps.apple.com/in/app/glocal-prayer-network/id6479648726"
+              },
+              ananthjeevan: {
+                android: "https://play.google.com/store/apps/details?id=com.ananthjeevan.ep&hl=en",
+                ios: "https://apps.apple.com/us/app/ananth-jeevan/id1660739539"
+              }
+            };
+        
+            if (selectedApp && urls[selectedApp][platform]) {
+              window.open(urls[selectedApp][platform], "_blank");
+            }
+        
+            document.getElementById("store-popup").style.display = "none";
+          }
+        </script>
+        
         <!-- -------------- CONTACT BOX ---------------- -->
         <section class="section" id="contact">
           <div class="top-header">
@@ -212,7 +301,7 @@
               <div class="contact-info">
                 <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
                 <p><i class="uil uil-envelope"></i>avnlmonika2@gmail.com</p>
-                <p><i class="uil uil-phone"></i>+91 7997661770</p>
+                <p><i class="uil uil-phone"></i>+91 9059908917</p>
               </div>
             </div>
           </div>
@@ -239,11 +328,28 @@
             </li>
           </ul>
         </div>
-        <div class="footer-social-icons">
-          <div class="icon"><i class="uil uil-instagram"></i></div>
-          <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
-          <div class="icon"><i class="uil uil-dribbble"></i></div>
-          <div class="icon"><i class="uil uil-github-alt"></i></div>
+        <div class="social_icons">
+          <a
+            href="https://www.instagram.com/code_maverickss_?igsh=MWN6eTR4YmxkNTdyOQ=="
+            target="_blank"
+            class="icon"
+            ><i class="uil uil-instagram"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/lakshmi-monika-425721222/"
+            target="_blank"
+            class="icon"
+            ><i class="uil uil-linkedin-alt"></i
+          ></a>
+          <a href="https://x.com/avnlmonika2" target="_blank" class="icon"
+            ><i class="uil uil-twitter-alt"></i
+          ></a>
+          <a
+            href="https://github.com/lakshmimoni/Monika"
+            target="_blank"
+            class="icon"
+            ><i class="uil uil-github-alt"></i
+          ></a>
         </div>
         <div class="bottom-footer">
           <p>
